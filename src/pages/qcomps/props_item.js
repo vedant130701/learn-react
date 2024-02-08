@@ -1,9 +1,13 @@
 function Item({ name, isPacked }) {
-  if (isPacked) {
-    return <li className="item">{name} ✔</li>;
-  }
-  return <li className="item"> {name} </li>
+  return isPacked? <li className="item">{name} ✔</li>: <li className="item"> <del>{name}</del> </li>
 }
+
+// <del> strikes out
+// if (isPacked) {
+//   return <li className="item">{name} ✔</li>;
+// }
+// return <li className="item"> <del>{name}</del> </li>
+// we can use ternary operator also as shown above
 
 export default function PackingList() {
   return (

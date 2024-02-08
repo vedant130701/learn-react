@@ -6,7 +6,7 @@ function Square({children}) {
     </div>
   )
 }
-
+// children bound to child component of Square component. This helps in styling the children in a standard format.
 export default function Holder() {
   return (
     <div>
