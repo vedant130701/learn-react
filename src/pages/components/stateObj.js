@@ -5,7 +5,7 @@ export default function PersonData() {
     const [lName, setLName] = useState('');
     const [age, setAge] = useState(0);
     const [person, setPerson] = useState({fullName: '', age: 0})
-
+    //initial value needs to be set
     function handleClick() {
         let name = fName + ' ' + lName;
         setPerson({fullName: name, age: age});
