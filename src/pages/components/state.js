@@ -2,7 +2,12 @@ import { useState } from 'react';
 import { sculptureList } from '../../data/data.js';
 
 export default function Gallery() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0); 
+  //this is a react hook
+  //initially state 0. React uses index and setIndex to update index
+  //setIndex, when react sees that, re-renders part of the screen that has changed due to index
+  //state is for interaction, not storage
+  //setIndex like a trigger here
 
   function handleClick() {
     setIndex(index + 1);
