@@ -10,5 +10,6 @@ export default function List() {
   const listItems = people.map((person, index) =>
     <li key={index}>{person}</li>
   );
+  // here index of array taken in as key. But not that good, as any change messes up stuff.
   return <ul>{listItems}</ul>;
 }
