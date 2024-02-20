@@ -15,6 +15,9 @@ export default function Form() {
     const nextPerson = { ...person, artwork: nextArtwork };
     setPerson(nextPerson);
   }
+  // we want a new object to be created and re-rendered as a good practice. So this copy of artwork, only city changed
+  // then copy of person with new artwork
+  // deepcopy of entire object is created
 
 
   return (
