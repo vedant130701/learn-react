@@ -7,16 +7,30 @@ const initialList = [
   { id: 2, title: 'Terracotta Army', seen: true },
 ];
 
+// so since we initialize both list with initial list, reference is same.
+// now even though we create a map to create copy of the list, issue is that inside the objects reference is same.
+// so both updated.
+// so we need deep copy.
+
 export default function BucketList() {
   const [myList, setMyList] = useState(initialList);
   const [yourList, setYourList] = useState(
     initialList
   );
+  // const [yourList, setYourList] = useState(
+  //   initialList.map((i) => {
+  //     return {...i}
+  //   })
+  // );
+  // this a deepcopy of initialList.
 
   function handleToggleMyList(artworkId, nextSeen) {
+    const artworkUpd = [...myList,]
     const tmpList = myList.map(e => {
         if (e.id === artworkId) {
-            e.seen = nextSeen
+            return {...e, seen: nextSeen}
+            // deep copy on demand
+            // e.seen = nextSeen
         }
         return e
     });
@@ -26,9 +40,11 @@ export default function BucketList() {
   function handleToggleYourList(artworkId, nextSeen) {
     const tmpList = yourList.map(e => {
         if (e.id === artworkId) {
-            e.seen = nextSeen
+            // e.seen = nextSeen
+            return {...e, seen: nextSeen}
+            // deep copy on demand
         }
-        return e
+        return {...e}
     });
     setYourList(tmpList);
   }
