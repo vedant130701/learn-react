@@ -13,4 +13,6 @@ export default function Counter() {
       }}>+3</button>
     </>
   )
+  // setNumber called, it does not render until done. So setNumber even done three times, the number does not update until render
+  // so number + 1 only happens once. even though called thrice.
 }

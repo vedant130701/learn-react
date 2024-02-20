@@ -10,6 +10,7 @@ export default function Counter() {
         setNumber(n => n + 1);
         setNumber(n => n + 1);
         setNumber(n => n + 1);
+        // arrow function puts it into queue.
       }}>+3</button>
     </>
   )

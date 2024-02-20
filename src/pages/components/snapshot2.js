@@ -10,7 +10,7 @@ export default function Form() {
       alert(`You said ${message} to ${to}`);
     }, 5000);
   }
-
+  // previous state was taken while sending msg. Since 5 second delay so we see response with old $to even though new $to we can change
   return (
     <form onSubmit={handleSubmit}>
       <label>

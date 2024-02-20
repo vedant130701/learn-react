@@ -2,12 +2,12 @@
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import Form from './qcomps/thankYouCrash'
+import Counter from './qcomps/shoppingCart'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Form />
+        <Counter />
     </div>
   )
 }
