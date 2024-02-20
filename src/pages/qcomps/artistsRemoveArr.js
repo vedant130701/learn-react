@@ -19,7 +19,10 @@ export default function List() {
           <li key={artist.id}>
             {artist.name}{' '}
             <button onClick={() => {
-              artists.splice(artist.id, 1)
+              setArtists(artists.filter((obj) => obj.id != artist.id))
+              // artists.splice(artist.id, 1)
+              // splice is not allowed as it changes array. We can filter out and use setArtsts to set a new array.
+              // filter used to create a copy.
             }}>
               Delete
             </button>
